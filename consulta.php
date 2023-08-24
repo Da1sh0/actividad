@@ -6,7 +6,7 @@ include "conexion.php";
 <html>
 <head>
     <link rel="icon" href="img/icon.svg">
-    <title>DATOS GUARDADOS</title>
+    <title>Datos Guardados</title>
 </head>
 <body>
     <center>

@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     <center>
-        <h1>Datos</h1>
         <form method="POST" enctype="multipart/form-data">
             <h1>Registro</h1>
             <label for="nombre">Nombre Completo:</label>
