@@ -1,0 +1,6 @@
+RewriteEngine On
+Options All -indexes
+RewriteRule ^([a-zA-Z-9/]+)$ index.php?views=$1
+
+ErrorDocument 404 /actividad/no.php
+
