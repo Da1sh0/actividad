@@ -1,0 +1,95 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  /* Estilos para el contenedor central */
+  .center-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para los títulos */
+  h1 {
+    color: #76d7c4;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el formulario */
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2f2f2e;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el campo de archivo */
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  /* Estilos para los botones */
+  input[type="submit"],
+  button {
+    margin-right: 10px;
+    padding: 10px 25px; /* Ajusta el ancho del botón */
+    background-color: #76d7c4;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+    background-color: #f4d03f;
+  }
+  
+  /* Estilos para los enlaces dentro de los botones */
+  button a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Estilos para los enlaces dentro de los botones al pasar el cursor */
+  button a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para mensajes de éxito */
+  .success-message {
+    color: #00cc00;
+  }
+  
+  /* Estilos para mensajes de error */
+  .error-message {
+    color: #ff0000;
+  }
+  

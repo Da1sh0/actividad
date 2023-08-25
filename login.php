@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($contrasena, $contrasena_hash)) {
                 session_start();
                 $_SESSION['usuario_id'] = $fila['id'];
-                header("Location: perfil.php"); // Cambiar esto a la página de perfil
+                header("Location: index.html");
                 exit();
             } else {
                 $error = "Contraseña incorrecta";
@@ -35,7 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icon.svg">
+    <link rel="stylesheet" href="css/stylesLogin.css">
+    <link rel="icon" href="svg/icon.svg">
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -48,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="password" name="contrasena" required><br>
             <center>
                 <input type="submit" name="iniciar_sesion" value="Iniciar Sesión">
-                <button><a href="index.php">No tengo una cuenta</a></button>
-
+                <button><a href="register.php">No tengo una cuenta</a></button>
+                <button><a href="index.html">Volver</a></button>
             </center>
         </form>
         <?php if (isset($error)) { ?>

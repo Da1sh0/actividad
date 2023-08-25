@@ -32,7 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icon.svg">
+    <link rel="stylesheet" href="css/stylesRegister.css">
+    <link rel="icon" href="svg/icon.svg">
     <title>Crud de Diiego</title>
 </head>
 <body>
@@ -51,8 +52,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="file" name="imagen" accept=".jpg, .jpeg, .png, .webp, .gif" required><br><br>
             <center>
                 <input type="submit" name="guardar" value="Guardar">
-                <button><a href="consulta.php">Consultar Usuarios Registrados</a></button>
-                <button><a href="inicio.php">Iniciar Sesion</a></button>
+                <button><a href="login.php">Iniciar Sesion</a></button>
+                <button><a href="index.html">Volver</a></button>
             </center>
         </form>
     </center>
