@@ -8,4 +8,4 @@ deny from all
 
 RewriteRule ^([a-zA-Z-9/]+)$ index.php?views=$1
 ErrorDocument 403 /diiego/error403.php
-ErrorDocument 404 /diiego/error403.php
+ErrorDocument 404 /diiego/error404.php

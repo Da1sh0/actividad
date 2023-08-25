@@ -8,7 +8,7 @@ include "conexion.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesUsers.css">
-    <link rel="icon" href="img/icon.svg">
+    <link rel="icon" href="svg/icon.svg">
     <title>Datos Guardados</title>
 </head>
 <body>
@@ -21,6 +21,8 @@ include "conexion.php";
                 <th>Correo</th>
                 <th>Telefono</th>
                 <th>Imagen</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
             <?php
             $query = mysqli_query($conexion, "SELECT * FROM usuarios");
@@ -36,6 +38,8 @@ include "conexion.php";
                         <td>
                             <img height="50px" src="data:<?php echo $data['imagen_tipo']; ?>;base64,<?php echo base64_encode($data['imagen']); ?>" alt="Imagen">
                         </td>
+                        <td><a href="edit.php?id=<?php echo $data['id']; ?>">Editar</a></td>
+                        <td><a href="delete.php?id=<?php echo $data['id']; ?>">Eliminar</a></td>
                     </tr>
 
                     <?php
