@@ -1,6 +1,11 @@
 RewriteEngine On
 Options All -indexes
+
+#<files inicio.php|>
+#order allow,deny
+#deny from all
+#</files>
+
 RewriteRule ^([a-zA-Z-9/]+)$ index.php?views=$1
-
-ErrorDocument 404 /actividad/no.php
-
+#ErrorDocument 403 /diiego/imprimir.php
+ErrorDocument 404 /diiego/no.php
