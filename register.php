@@ -32,30 +32,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesRegister.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="icon" href="svg/icon.svg">
     <title>Crud de Diiego</title>
 </head>
 <body>
-    <center>
+    <div class="register-form">
+        <h1>Registro</h1>
         <form method="POST" enctype="multipart/form-data">
-            <h1>Registro</h1>
             <label for="nombre">Nombre Completo:</label>
-            <input type="text" name="nombre" required><br>
+            <input type="text" name="nombre" placeholder="Nombre Completo" required>
             <label for="correo">Correo:</label>
-            <input type="email" name="correo" required><br>
+            <input type="email" name="correo" placeholder="Direccion de correo" required>
             <label for="contrasena">Contraseña:</label>
-            <input type="password" name="contrasena" required><br>
+            <input type="password" name="contrasena" placeholder="Constraseña" required>
             <label for="telefono">Teléfono:</label>
-            <input type="number" name="telefono" required><br>
-            <label>Foto:</label>
-            <input type="file" name="imagen" accept=".jpg, .jpeg, .png, .webp, .gif" required><br><br>
-            <center>
-                <input type="submit" name="guardar" value="Guardar">
-                <button><a href="login.php">Iniciar Sesion</a></button>
-                <button><a href="index.html">Volver</a></button>
-            </center>
+            <input type="tel" name="telefono" placeholder="Numero telefonico" required>
+            <label for="imagen">Foto:</label>
+            <input type="file" name="imagen" accept=".jpg, .jpeg, .png, .webp, .gif" required>
+            <button type="submit">Guardar</button>
+            <a href="login.php">Iniciar Sesión</a>
+            <a href="index.html">Volver</a>
         </form>
-    </center>
+    </div>
 </body>
 </html>

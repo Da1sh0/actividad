@@ -1,0 +1,78 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #D6EAF8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background-color: #FDFEFE;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-container h1 {
+    color: #8E44AD;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: inline-block;
+    width: 100px;
+    margin-top: 10px;
+    color: #1F618D;
+    text-align: left;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #1F618D;
+    color: #FDFEFE;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #17202A;
+}
+
+.login-container a {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #1F618D;
+    color: #FDFEFE;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    background-color: #17202A;
+}

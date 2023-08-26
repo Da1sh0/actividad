@@ -1,0 +1,30 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #D6EAF8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #1F618D  x   ;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+a:hover {
+    text-decoration: underline;
+}

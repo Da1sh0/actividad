@@ -35,27 +35,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stylesLogin.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="svg/icon.svg">
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <center>
-        <h1>Iniciar Sesión</h1>
-        <form method="POST">
-            <label for="correo">Correo:</label>
-            <input type="email" name="correo" required><br>
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" name="contrasena" required><br>
-            <center>
-                <input type="submit" name="iniciar_sesion" value="Iniciar Sesión">
-                <button><a href="register.php">No tengo una cuenta</a></button>
-                <button><a href="index.html">Volver</a></button>
-            </center>
-        </form>
-        <?php if (isset($error)) { ?>
-            <p><?php echo $error; ?></p>
-        <?php } ?>
-    </center>
+    <div class="login-container">
+        <center>
+            <h1>Iniciar Sesión</h1>
+            <form method="POST">
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" placeholder="Direccion de correo" required><br>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" placeholder="Contraseña" required><br>
+                <center>
+                    <input type="submit" name="iniciar_sesion" value="Iniciar Sesión">
+                    <a href="register.php">No tengo una cuenta</a>
+                    <a href="index.html">Volver</a>
+                </center>
+            </form>
+            <?php if (isset($error)) { ?>
+                <p><?php echo $error; ?></p>
+            <?php } ?>
+        </center>
+    </div>
 </body>
 </html>

@@ -48,5 +48,3 @@ if ($result > 0) {
 
 $pdf->Output();
 ?>
-
-
