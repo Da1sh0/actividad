@@ -65,7 +65,6 @@ include "conexion.php";
                 ?>
             </tbody>
         </table>
-        <button><a href="register.php">Volver al registro</a></button>
         <button><a href="print.php">Imprimir</a></button>
         <button><a href="index.html">Volver</a></button>
     </center>
