@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conexion, $query);
 
     if ($result) {
-        header("Location: index.html"); // Redirigir después de la eliminación
+        header("Location: usets.php"); // Redirigir después de la eliminación
         exit();
     } else {
         echo "Error al eliminar el registro: " . mysqli_error($conexion);

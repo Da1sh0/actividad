@@ -2,7 +2,8 @@
 require_once("conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['contrasena']) || empty($_POST['telefono']) || empty($_FILES['imagen']['tmp_name'])) {
+    if (empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['contrasena']) || empty($_POST['telefono']) || 
+    empty($_FILES['imagen']['tmp_name'])) {
         echo "Por favor llenar los campos correspondientes";
     } else {
         $nombre = $_POST['nombre'];
@@ -11,11 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $passencript = password_hash($contrasena, PASSWORD_DEFAULT, ['cost' => 6]);
         $telefono = $_POST['telefono'];
 
-        $imagen = $_FILES['imagen'];
-        $imagen_data = addslashes(file_get_contents($imagen['tmp_name']));
-        $imagen_tipo = $imagen['type'];
-
-        $query = "INSERT INTO usuarios (nombre, correo, contrasena, telefono, imagen, imagen_tipo) VALUES('$nombre', '$correo', '$passencript', '$telefono', '$imagen_data', '$imagen_tipo')";
+        $query = "INSERT INTO usuarios (nombre, correo, contrasena, telefono, imagen, imagen_tipo) 
+        VALUES('$nombre', '$correo', '$passencript', '$telefono', '$imagen_data', '$imagen_tipo')";
         $resultado = $conexion->query($query);
 
         if ($resultado) {
@@ -40,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="register-form">
         <h1>Registro</h1>
         <form method="POST" enctype="multipart/form-data">
+
             <label for="nombre">Nombre Completo:</label>
             <input type="text" name="nombre" placeholder="Nombre Completo" required>
             <label for="correo">Correo:</label>
@@ -50,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <input type="tel" name="telefono" placeholder="Numero telefonico" required>
             <label for="imagen">Foto:</label>
             <input type="file" name="imagen" accept=".jpg, .jpeg, .png, .webp, .gif" required>
+
             <button type="submit">Guardar</button>
             <a href="login.php">Iniciar Sesión</a>
             <a href="index.html">Volver</a>

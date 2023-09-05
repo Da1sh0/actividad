@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($contrasena, $contrasena_hash)) {
                 session_start();
                 $_SESSION['usuario_id'] = $fila['id'];
-                header("Location: index.html");
+                header("Location: users.php");
                 exit();
             } else {
                 $error = "Contraseña incorrecta";
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     <a href="index.html">Volver</a>
                 </center>
             </form>
-            <?php if (isset($error)) { ?>
+                <?php if (isset($error)) { ?>
                 <p><?php echo $error; ?></p>
             <?php } ?>
         </center>

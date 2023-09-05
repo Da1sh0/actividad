@@ -1,4 +1,20 @@
 <?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión
+if (!isset($_SESSION["usuario_id"])) {
+    // Si no ha iniciado sesión, redirige al formulario de inicio de sesión
+    header("Location: error403.php");
+    exit();
+}
+
+// Cerrar sesión cuando se hace clic en el botón "Cerrar Sesión"
+if (isset($_POST["cerrar_sesion"])) {
+    session_destroy(); // Destruir todas las variables de sesión
+    header("Location: login.php"); // Redirigir al formulario de inicio de sesión
+    exit();
+}
+
 include "conexion.php";
 ?>
 
@@ -8,7 +24,7 @@ include "conexion.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/users.css">
-    <link rel="icon" href="svg/icon.svg">
+    <link rel="icon" href="/svg/icon.svg">
     <title>Datos Guardados</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -29,6 +45,7 @@ include "conexion.php";
 </head>
 <body>
     <center>
+        <h2>Buenos días, <?php echo $_SESSION["nombre"]; ?>!</h2>
         <h1>DATOS GUARDADOS</h1>
         <input type="text" id="search" placeholder="Buscar por nombre...">
         <table>
@@ -40,6 +57,7 @@ include "conexion.php";
                 <th>Imagen</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
+                <th>Imprimir</th>
             </tr>
             <tbody id="table-data">
                 <?php
@@ -58,6 +76,7 @@ include "conexion.php";
                             </td>
                             <td><a href="edit.php?id=<?php echo $data['id']; ?>">Editar</a></td>
                             <td><a href="delete.php?id=<?php echo $data['id']; ?>">Eliminar</a></td>
+                            <td><a href="printonly.php?id=<?php echo $data['id']; ?>">Imprimir</a></td>
                         </tr>
                         <?php
                     }
@@ -65,8 +84,10 @@ include "conexion.php";
                 ?>
             </tbody>
         </table>
-        <button><a href="print.php">Imprimir</a></button>
-        <button><a href="index.html">Volver</a></button>
+        <form method="post">
+            <button><a href="print.php">Imprimir</a></button>
+            <input type="submit" name="cerrar_sesion" value="Cerrar Sesión">
+        </form>
     </center>
 </body>
 </html>

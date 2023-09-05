@@ -1,6 +1,5 @@
 <?php
 require('fpdf.php');
-
 include "conexion.php";
 
 class PDF extends FPDF
@@ -45,6 +44,5 @@ if ($result > 0) {
         $pdf->Cell(40, 10, $data['telefono'], 1,1,'L',0);
     }
 }
-
 $pdf->Output();
 ?>
