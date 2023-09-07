@@ -45,7 +45,6 @@ include "conexion.php";
 </head>
 <body>
     <center>
-        <h2>Buenos días, <?php echo $_SESSION["nombre"]; ?>!</h2>
         <h1>DATOS GUARDADOS</h1>
         <input type="text" id="search" placeholder="Buscar por nombre...">
         <table>
